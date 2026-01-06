@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE ADWORLD</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* ================= HEADER / LOGO ================= */
+header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding:60px 20px;
+    background:hsl(0, 0%, 100%);
+    border-bottom:5px solid #0030aa;
+}
+
+header .the{
+    font-size:90px;
+    font-weight:900;
+    color:#A6A6A6;
+}
+
+header .ad-circle{
+    width:130px;
+    height:130px;
+    background:#ff7a00;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:70px;
+    font-weight:900;
+    color:#fff;
+    animation:pop 0.8s ease forwards;
+}
+
+header .world{
+    font-size:90px;
+    font-weight:900;
+    color:#ff7a00;
+}
+
+@keyframes pop{
+    from{transform:scale(0); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    padding:25px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#0030aa;
+    padding:10px 22px;
+    border-radius:8px;
+}
+
+/* ================= HERO TEXT ================= */
+.content{
+    text-align:center;
+    font-size:28px;
+    margin-top:20px;
+}
+
+/* ================= SERVICES ================= */
+.services{
+    margin:60px auto;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.box{
+    width:260px;
+    background:rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,0.2);
+}
+
+/* ================= CLIENTS SECTION ================= */
+.clients{
+    margin:80px auto;
+    padding:40px 20px;
+    max-width:1200px;
+    text-align:center;
+}
+
+.clients h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.clients p{
+    font-size:18px;
+    color:#ee1414;
+    margin-bottom:50px;
+}
+
+/* LOGO GRID */
+.client-logos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+    gap:40px;
+    align-items:center;
+}
+
+.client-logos img{
+    max-width:160px;
+    margin:auto;
+    filter:grayscale(100%);
+    opacity:0.7;
+    transition:0.4s;
+}
+
+.client-logos img:hover{
+    filter:grayscale(0%);
+    opacity:1;
+    transform:scale(1.05);
+}
+
+/* ================= FOOTER SPACE ================= */
+footer{
+    height:80px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="the">THE</div>
+    <div class="ad-circle">AD</div>
+    <div class="world">WORLD</div>
+</header>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<div class="content">
+    👋 Welcome to <strong>THE ADWORLD</strong><br>
+    We are experts in creative branding & visual identity.
+</div>
+
+<!-- ===== SERVICES ===== -->
+<div class="services">
+    <div class="box">🎨 Graphic Designing</div>
+    <div class="box">🖨️ Printing Services</div>
+    <div class="box">👕 T-Shirt Designing</div>
+    <div class="box">📌 Logo & Branding</div>
+    <div class="box">📱 Social Media Marketing</div>
+</div>
+
+<!-- ===== CLIENTS ===== -->
+<section class="clients">
+    <h2>Our Clients</h2>
+    <p>Trusted by leading Indian & global brands</p>
+
+    <div class="client-logos">
+        <img src="C:\Users\User\Pictures\Camera Roll\download.jfif" alt="Optum">
+        <img src="C:\Users\User\Pictures\Camera Roll\toshiba.png" alt="Toshiba">
+        <img src="C:\Users\User\Pictures\Camera Roll\concentrix.jfif" alt="Concentrix">
+        <img src="C:\Users\User\Pictures\Camera Roll\download.png" alt="AON">
+        <img src="C:\Users\User\Pictures\Camera Roll\download (1).png" alt="Ken Blanchard">
+        <img src="C:\Users\User\Pictures\Camera Roll\download (2).png" alt="KPMG">
+        <img src="C:\Users\User\Pictures\Camera Roll\download (3).png" alt="Convergys">
+    </div>
+</section>
+
+<footer></footer>
+
+</body>
+</html>
