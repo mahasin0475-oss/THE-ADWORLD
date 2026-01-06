@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | THE ADWORLD</title>
+    <style>
+        body{
+            margin:0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #222, #444, #111);
+            color:white;
+            background-size: 300% 300%;
+            animation: bgMove 12s infinite alternate;
+        }
+        @keyframes bgMove{
+            0%{background-position: left;}
+            100%{background-position: right;}
+        }
+
+        header{
+            text-align:center;
+            padding:20px;
+            font-size:45px;
+            font-weight:900;
+            letter-spacing:4px;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            font-size:20px;
+            margin-bottom: 40px;
+        }
+        nav a{
+            text-decoration:none;
+            color:white;
+            font-weight:600;
+        }
+        nav a:hover{
+            color:yellow;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .grid{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
+            padding:0 20px;
+        }
+
+        .card{
+            width:250px;
+            height:250px;
+            background:rgba(255,255,255,0.1);
+            border-radius:12px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:20px;
+            font-weight:700;
+            text-align:center;
+            backdrop-filter: blur(4px);
+            transition:0.3s;
+        }
+        .card:hover{
+            transform:scale(1.06);
+            background:rgba(255,255,255,0.3);
+        }
+
+        .btn{
+            display:block;
+            margin:30px auto;
+            width:200px;
+            text-align:center;
+            padding:12px;
+            background:yellow;
+            color:black;
+            border-radius:8px;
+            font-weight:700;
+            text-decoration:none;
+        }
+        .btn:hover{
+            background:black;
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+
+<header>OUR PORTFOLIO</header>
+
+<nav>
+    <a href="the_adworld.html">Home</a>
+    <a href="portfolio.html" style="color:yellow;">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a href="services.html">Services</a>
+</nav>
+
+<h2>📌 Hamare Recent Designing Work</h2>
+
+<div class="grid">
+    <div class="card">Logo Design</div>
+    <div class="card">T-Shirt Design</div>
+    <div class="card">Visiting Card</div>
+    <div class="card">Banner Design</div>
+    <div class="card">Social Media Post</div>
+    <div class="card">Hoarding / Flex</div>
+</div>
+
+<a href="#" class="btn">Sample Images Add (Coming Soon)</a>
+
+</body>
+</html>

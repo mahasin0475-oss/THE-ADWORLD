@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | THE ADWORLD</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364,#1a1a1a);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+    color:#fff;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    text-align:center;
+    padding:40px 20px 20px;
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin-bottom:40px;
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+}
+nav a:hover{color:#ffd700;}
+
+.main{
+    display:flex;
+    gap:40px;
+    padding:20px 60px 60px;
+}
+
+/* LEFT SIDE */
+.left{
+    flex:2;
+}
+
+.trust-box{
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:30px;
+    text-align:center;
+    backdrop-filter:blur(6px);
+}
+.trust-box h2{
+    font-size:28px;
+    margin-bottom:10px;
+    color:#ffd700;
+}
+.trust-box p{
+    font-size:17px;
+    line-height:1.7;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:14px;
+    text-align:center;
+    font-weight:600;
+    transition:.4s;
+    backdrop-filter:blur(5px);
+}
+.card:hover{
+    transform:translateY(-8px) scale(1.04);
+    background:rgba(255,255,255,0.28);
+}
+
+/* RIGHT SIDE BOOKING */
+.right{
+    flex:1;
+}
+
+.booking{
+    background:rgba(0,0,0,0.55);
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 0 30px rgba(0,0,0,.6);
+}
+
+.booking h3{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:20px;
+    color:#ffd700;
+}
+
+.booking label{
+    display:block;
+    margin:12px 0 5px;
+    font-size:15px;
+}
+
+.booking input,
+.booking select,
+.booking textarea{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-size:14px;
+}
+
+.booking textarea{resize:none;height:80px;}
+
+.booking button{
+    margin-top:18px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#ffd700,#ff9f00);
+    font-weight:700;
+    font-size:16px;
+    cursor:pointer;
+}
+.booking button:hover{opacity:.9;}
+
+@media(max-width:900px){
+    .main{flex-direction:column;padding:20px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>OUR SERVICES</header>
+
+<nav>
+    <a href="the_adworld.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="services.html" style="color:#ffd700;">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="main">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <div class="trust-box">
+            <h2>Trusted & Fast Growing Company</h2>
+            <p>
+                Bohut saari companies apna kaam <b>THE ADWORLD</b> se karwati hain.  
+                Hum fast delivery, professional quality aur trusted service ke liye jaane jaate hain.
+            </p>
+        </div>
+
+        <div class="services">
+            <div class="card">🎨 Graphic Designing</div>
+            <div class="card">🖊️ Pen Design & Printing</div>
+            <div class="card">☕ Cup Design & Printing</div>
+            <div class="card">📘 Book Cover Design</div>
+            <div class="card">🪪 ID Card Design & Printing</div>
+            <div class="card">🖼️ Photo Editing & Printing</div>
+            <div class="card">📌 Logo Designing</div>
+            <div class="card">📄 Prospectus Designing</div>
+            <div class="card">📚 Book Designing</div>
+            <div class="card">👕 T-Shirt Designing</div>
+            <div class="card">🏢 Company Work Designing</div>
+            <div class="card">🖨️ Flex, Banner & Hoarding</div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT BOOKING -->
+    <div class="right">
+        <div class="booking">
+            <h3>Book Your Service</h3>
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="Enter mobile number">
+
+            <label>Select Service</label>
+            <select>
+                <option>Graphic Designing</option>
+                <option>Printing Services</option>
+                <option>Logo Designing</option>
+                <option>T-Shirt Designing</option>
+                <option>Book / Cover Designing</option>
+                <option>ID Card Printing</option>
+                <option>Photo Editing & Printing</option>
+                <option>Other Company Work</option>
+            </select>
+
+            <label>Message</label>
+            <textarea placeholder="Explain your requirement"></textarea>
+
+            <button>Submit Booking</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

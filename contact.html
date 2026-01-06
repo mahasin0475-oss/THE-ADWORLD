@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | THE ADWORLD</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364,#1a1a1a);
+    background-size:400% 400%;
+    animation:bg 14s ease infinite;
+    color:#fff;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    text-align:center;
+    padding:45px 20px;
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.main{
+    display:flex;
+    gap:40px;
+    padding:20px 60px 60px;
+}
+
+.left{flex:2;}
+.right{flex:1;}
+
+.box{
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:25px;
+    backdrop-filter:blur(6px);
+}
+
+.box h2{
+    color:#ffd700;
+    margin-bottom:12px;
+    font-weight:700;
+}
+.box p{
+    font-size:16px;
+    line-height:1.8;
+    font-weight:500;
+}
+
+/* OWNER */
+.owner{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+.owner-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#444;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+/* MACHINES */
+.machines{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+.machine{
+    height:130px;
+    background:#333;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+}
+
+/* CHAT */
+.chatbox{
+    background:rgba(0,0,0,0.6);
+    border-radius:22px;
+    padding:20px;
+    height:560px;
+    display:flex;
+    flex-direction:column;
+}
+.chatbox h3{
+    text-align:center;
+    margin-bottom:12px;
+    color:#ffd700;
+    font-size:24px;
+    font-weight:700;
+}
+.messages{
+    flex:1;
+    overflow-y:auto;
+    padding:10px;
+}
+.msg{
+    margin-bottom:12px;
+    padding:12px 14px;
+    border-radius:12px;
+    max-width:82%;
+    font-size:14.5px;
+}
+.user{
+    background:#ffd700;
+    color:#000;
+    margin-left:auto;
+    font-weight:600;
+}
+.bot{
+    background:#2a2a2a;
+    font-weight:500;
+}
+
+.chat-input{
+    display:flex;
+    gap:10px;
+}
+.chat-input input{
+    flex:1;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    font-size:14px;
+}
+.chat-input button{
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    background:#ffd700;
+    font-weight:700;
+    cursor:pointer;
+}
+
+@media(max-width:900px){
+    .main{flex-direction:column;padding:20px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>CONTACT US</header>
+
+<div class="main">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+        <div class="box">
+            <h2>Contact Details</h2>
+            <p>
+                📞 Phone: 8851168835<br>
+                📧 Email: info@yourcompany.com<br>
+                📍 Address: DLF Phase 3, V Block 11/44<br>
+                🕘 Working Hours: 9:30 AM – 7:00 PM
+            </p>
+        </div>
+
+        <div class="box owner">
+            <div class="owner-img">OWNER</div>
+            <div>
+                <h2>Veena Singhal</h2>
+                <p>
+                    Founder & Owner of THE ADWORLD.  
+                    Known for delivering high-quality graphic designing and printing services worldwide.  
+                    The company works with experienced senior designers, modern printing machines, and a hardworking professional team.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Our Printing Machines & Equipment</h2>
+            <div class="machines">
+                <div class="machine">Machine Image 1</div>
+                <div class="machine">Machine Image 2</div>
+                <div class="machine">Machine Image 3</div>
+                <div class="machine">Machine Image 4</div>
+                <div class="machine">Machine Image 5</div>
+            </div>
+            <p style="margin-top:15px;">
+                We use high-quality papers, advanced printing technology, and skilled designers to ensure premium output for every project.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE AI AGENT -->
+    <div class="right">
+        <div class="chatbox">
+            <h3>🤖 Chat With Us</h3>
+
+            <div class="messages" id="messages">
+                <div class="msg bot">
+                    Hello 👋 I am your virtual assistant.  
+                    Ask me about our services, working hours, location, pricing, or delivery time.
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message here...">
+                <button onclick="sendMsg()">Send</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function sendMsg(){
+    let input=document.getElementById("userInput");
+    let text=input.value.trim();
+    if(text==="") return;
+
+    let msg=text.toLowerCase();
+    let messages=document.getElementById("messages");
+
+    messages.innerHTML+=`<div class="msg user">${text}</div>`;
+    input.value="";
+
+    let reply="We provide professional graphic designing and printing solutions with fast delivery and premium quality.";
+
+    if(msg.includes("service")){
+        reply="We offer Graphic Designing, Logo Designing, Printing Services, T-Shirt Designing, Book & Cover Design, ID Card Printing, Photo Editing & Printing, Banner, Flex, Hoarding, Packaging Design, and complete company branding work.";
+    }
+    else if(msg.includes("time") || msg.includes("open") || msg.includes("hours")){
+        reply="Our company working hours are from 9:30 AM to 7:00 PM, Monday to Saturday.";
+    }
+    else if(msg.includes("location") || msg.includes("address")){
+        reply="Our company is located at DLF Phase 3, V Block 11/44.";
+    }
+    else if(msg.includes("contact") || msg.includes("number") || msg.includes("phone")){
+        reply="You can contact us directly at 8851168835 during working hours.";
+    }
+    else if(msg.includes("days") || msg.includes("delivery") || msg.includes("time required")){
+        reply="Designing and printing work usually takes 2 to 5 working days depending on the project.";
+    }
+    else if(msg.includes("quality")){
+        reply="We focus on premium quality using high-grade papers, modern machines, and experienced senior designers.";
+    }
+    else if(msg.includes("experience") || msg.includes("clients")){
+        reply="We have served many clients worldwide and are known as a trusted name in graphic design and printing.";
+    }
+
+    setTimeout(()=>{
+        messages.innerHTML+=`<div class="msg bot">${reply}</div>`;
+        messages.scrollTop=messages.scrollHeight;
+    },700);
+}
+</script>
+
+</body>
+</html>
