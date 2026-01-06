@@ -172,12 +172,13 @@ footer{
 
 <!-- ===== NAVBAR ===== -->
 <nav>
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
 </nav>
+
 
 <!-- ===== HERO ===== -->
 <div class="content">
